@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="100%" stop-color="#070e1e" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f1933" />
+      <stop offset="100%" stop-color="#070e1e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="680" fill="url(#bgGrad)" />
+
+  <text x="500" y="45" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="900" font-size="22" text-anchor="middle">Layer 2 Attack Mechanics: Native VLAN Double-Tagging Hopping (CVE-2001-1413)</text>
+  <text x="500" y="70" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">How Attackers Bypass Layer 3 Firewalls via Untagged Native VLAN Trunks</text>
+
+  <!-- Attacker Box (Left) -->
+  <rect x="50" y="110" width="230" height="150" rx="8" fill="url(#nodeGrad)" stroke="#ef4444" stroke-width="2" />
+  <rect x="65" y="125" width="200" height="24" rx="4" fill="rgba(239, 68, 68, 0.2)" />
+  <text x="165" y="141" fill="#f87171" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Attacker (Rogue Workstation)</text>
+  <text x="65" y="170" fill="#cbd5e1" font-family="monospace" font-size="11">• Port Access VLAN: 1 (Default)</text>
+  <text x="65" y="190" fill="#fbbf24" font-family="monospace" font-size="11">• Outer Tag: VLAN 1 (Native)</text>
+  <text x="65" y="210" fill="#38bdf8" font-family="monospace" font-size="11">• Inner Tag: VLAN 100 (Target)</text>
+  <text x="65" y="235" fill="#f87171" font-family="sans-serif" font-size="10">Crafts double 802.1Q headers</text>
+
+  <!-- Switch 1 (Center Left) -->
+  <rect x="360" y="110" width="250" height="150" rx="8" fill="url(#nodeGrad)" stroke="#f59e0b" stroke-width="2" />
+  <rect x="375" y="125" width="220" height="24" rx="4" fill="rgba(245, 158, 11, 0.2)" />
+  <text x="485" y="141" fill="#fbbf24" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Switch 1 (Access Layer)</text>
+  <text x="375" y="170" fill="#cbd5e1" font-family="monospace" font-size="11">• Trunk Native VLAN: 1</text>
+  <text x="375" y="190" fill="#f87171" font-family="monospace" font-size="11">• Native Tagging: DISABLED</text>
+  <text x="375" y="215" fill="#fbbf24" font-family="sans-serif" font-size="10">Strips Outer Tag (VLAN 1)!</text>
+  <text x="375" y="235" fill="#cbd5e1" font-family="sans-serif" font-size="10">Transmits untagged over trunk</text>
+
+  <!-- Switch 2 (Center Right) -->
+  <rect x="700" y="110" width="250" height="150" rx="8" fill="url(#nodeGrad)" stroke="#06b6d4" stroke-width="2" />
+  <rect x="715" y="125" width="220" height="24" rx="4" fill="rgba(6, 182, 212, 0.2)" />
+  <text x="825" y="141" fill="#22d3ee" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Switch 2 (Core / Target)</text>
+  <text x="715" y="170" fill="#cbd5e1" font-family="monospace" font-size="11">• Receives frame on trunk</text>
+  <text x="715" y="190" fill="#22d3ee" font-family="monospace" font-size="11">• Reads remaining tag: VLAN 100</text>
+  <text x="715" y="215" fill="#34d399" font-family="sans-serif" font-size="10">Treats frame as native to 100!</text>
+  <text x="715" y="235" fill="#f87171" font-family="sans-serif" font-weight="bold" font-size="10">DELIVERS TO VICTIM HOST!</text>
+
+  <!-- Connectors -->
+  <!-- Attacker to Switch 1 -->
+  <line x1="280" y1="185" x2="360" y2="185" stroke="#ef4444" stroke-width="3" />
+  <text x="320" y="175" fill="#f87171" font-family="monospace" font-size="10" text-anchor="middle">Double Tag</text>
+
+  <!-- Switch 1 to Switch 2 Trunk -->
+  <line x1="610" y1="185" x2="700" y2="185" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6" />
+  <text x="655" y="170" fill="#fbbf24" font-family="monospace" font-size="10" text-anchor="middle">Trunk Link</text>
+  <text x="655" y="205" fill="#f87171" font-family="monospace" font-size="9" text-anchor="middle">(Inner Tag 100)</text>
+
+  <!-- Target Victim Server (Bottom Right) -->
+  <rect x="700" y="320" width="250" height="110" rx="8" fill="url(#nodeGrad)" stroke="#38bdf8" stroke-width="2" />
+  <rect x="715" y="335" width="220" height="24" rx="4" fill="rgba(56, 189, 248, 0.2)" />
+  <text x="825" y="351" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Victim Database / PCI Server</text>
+  <text x="715" y="380" fill="#cbd5e1" font-family="monospace" font-size="11">• Restricted VLAN 100</text>
+  <text x="715" y="405" fill="#f87171" font-family="monospace" font-size="10">FIREWALL FULLY BYPASSED!</text>
+
+  <line x1="825" y1="260" x2="825" y2="320" stroke="#ef4444" stroke-width="3" />
+
+  <!-- Hardened Defense Box (Bottom Left) -->
+  <rect x="50" y="470" width="900" height="170" rx="8" fill="url(#nodeGrad)" stroke="#10b981" stroke-width="2" />
+  <rect x="65" y="485" width="870" height="26" rx="4" fill="rgba(16, 185, 129, 0.2)" />
+  <text x="500" y="502" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Zero-Trust Hardening Countermeasures (Synthesized by Dot1qForge Pro)</text>
+  <text x="80" y="535" fill="#34d399" font-family="monospace" font-size="11">1. Dedicated Quarantine Native VLAN:</text>
+  <text x="360" y="535" fill="#cbd5e1" font-family="sans-serif" font-size="11">Set "switchport trunk native vlan 999" (Assign NO host ports to VLAN 999).</text>
+
+  <text x="80" y="565" fill="#34d399" font-family="monospace" font-size="11">2. Global Native 802.1Q Tagging:</text>
+  <text x="360" y="565" fill="#cbd5e1" font-family="sans-serif" font-size="11">Enforce "vlan dot1q tag native". Native frames are explicitly tagged; Switch 1 never strips tag.</text>
+
+  <text x="80" y="595" fill="#34d399" font-family="monospace" font-size="11">3. Dynamic Trunking Protocol Elimination:</text>
+  <text x="360" y="595" fill="#cbd5e1" font-family="sans-serif" font-size="11">Apply "switchport nonegotiate" to all trunks; lock access ports to "switchport mode access".</text>
+
+  <text x="80" y="625" fill="#34d399" font-family="monospace" font-size="11">4. Explicit Trunk VLAN Pruning:</text>
+  <text x="360" y="625" fill="#cbd5e1" font-family="sans-serif" font-size="11">Whitelist required subnets: "switchport trunk allowed vlan 10,20,100" (Reject VLAN 1-4094).</text>
+</svg>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="100%" stop-color="#070e1e" />
+    </linearGradient>
+    <linearGradient id="dot1qGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1226" />
+      <stop offset="100%" stop-color="#070e1e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)" />
+
+  <!-- Top App Bar -->
+  <rect x="30" y="24" width="1140" height="70" rx="10" fill="url(#cardGrad)" stroke="#152244" stroke-width="1.5" />
+  <rect x="50" y="39" width="70" height="40" rx="8" fill="url(#dot1qGrad)" />
+  <text x="85" y="66" fill="#03060f" font-family="-apple-system, sans-serif" font-weight="900" font-size="12" text-anchor="middle">DOT1Q</text>
+  <text x="135" y="56" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="800" font-size="18">Dot1qForge Pro</text>
+  <text x="135" y="73" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">IEEE 802.1Q &amp; IEEE 802.1ad (QinQ) VLAN Trunking, Hopping Defense &amp; DTP Studio</text>
+
+  <!-- Badges -->
+  <rect x="630" y="44" width="115" height="28" rx="6" fill="rgba(6, 182, 212, 0.15)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="687" y="62" fill="#22d3ee" font-family="monospace" font-weight="bold" font-size="10" text-anchor="middle">IEEE 802.1Q</text>
+
+  <rect x="755" y="44" width="135" height="28" rx="6" fill="rgba(14, 165, 233, 0.15)" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="822" y="62" fill="#38bdf8" font-family="monospace" font-weight="bold" font-size="10" text-anchor="middle">IEEE 802.1ad QINQ</text>
+
+  <rect x="900" y="44" width="135" height="28" rx="6" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+  <text x="967" y="62" fill="#34d399" font-family="monospace" font-weight="bold" font-size="10" text-anchor="middle">DTP DEFENSE</text>
+
+  <rect x="1045" y="44" width="115" height="28" rx="6" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="1102" y="62" fill="#c4b5fd" font-family="monospace" font-weight="bold" font-size="10" text-anchor="middle">802.1p CoS</text>
+
+  <!-- Presets Strip -->
+  <rect x="30" y="110" width="310" height="34" rx="6" fill="rgba(6, 182, 212, 0.2)" stroke="#06b6d4" stroke-width="1.5" />
+  <text x="185" y="132" fill="#bae6fd" font-family="-apple-system, sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Enterprise Hardened Trunk (A+)</text>
+
+  <rect x="350" y="110" width="280" height="34" rx="6" fill="#0a1226" stroke="#152244" stroke-width="1" />
+  <text x="490" y="132" fill="#94a3b8" font-family="-apple-system, sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Carrier QinQ Metro-Ethernet (A+)</text>
+
+  <rect x="640" y="110" width="280" height="34" rx="6" fill="#0a1226" stroke="#152244" stroke-width="1" />
+  <text x="780" y="132" fill="#94a3b8" font-family="-apple-system, sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Vulnerable Default VLAN 1 Hopping (F)</text>
+
+  <!-- Left Column: Parameters & Live Diagnostics (Width: 460) -->
+  <rect x="30" y="160" width="460" height="300" rx="10" fill="url(#cardGrad)" stroke="#152244" stroke-width="1.5" />
+  <text x="50" y="190" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="bold" font-size="14">VLAN Tagging &amp; Trunk Parameters</text>
+
+  <text x="50" y="225" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Tagging Architecture</text>
+  <rect x="50" y="235" width="200" height="30" rx="5" fill="#03060f" stroke="#152244" />
+  <text x="60" y="255" fill="#22d3ee" font-family="monospace" font-size="11">802.1Q Single-Tagged</text>
+
+  <text x="270" y="225" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Primary / Outer VLAN</text>
+  <rect x="270" y="235" width="200" height="30" rx="5" fill="#03060f" stroke="#152244" />
+  <text x="280" y="255" fill="#38bdf8" font-family="monospace" font-size="11">VLAN 100</text>
+
+  <text x="50" y="295" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">802.1p Priority (PCP)</text>
+  <rect x="50" y="305" width="200" height="30" rx="5" fill="#03060f" stroke="#152244" />
+  <text x="60" y="325" fill="#34d399" font-family="monospace" font-size="11">0 - Best Effort (BE)</text>
+
+  <text x="270" y="295" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Trunk Native VLAN</text>
+  <rect x="270" y="305" width="200" height="30" rx="5" fill="#03060f" stroke="#152244" />
+  <text x="280" y="325" fill="#c084fc" font-family="monospace" font-size="11">VLAN 999 (Quarantine)</text>
+
+  <text x="50" y="365" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Interface MTU</text>
+  <rect x="50" y="375" width="200" height="30" rx="5" fill="#03060f" stroke="#152244" />
+  <text x="60" y="395" fill="#fbbf24" font-family="monospace" font-size="11">9216 Bytes (Jumbo)</text>
+
+  <text x="270" y="365" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">DTP Negotiation</text>
+  <rect x="270" y="375" width="200" height="30" rx="5" fill="#03060f" stroke="#152244" />
+  <text x="280" y="395" fill="#34d399" font-family="monospace" font-size="11">nonegotiate (Disabled)</text>
+
+  <rect x="50" y="420" width="420" height="30" rx="5" fill="#01040a" stroke="#152244" />
+  <text x="60" y="440" fill="#cbd5e1" font-family="monospace" font-size="11">Tag Native: <tspan fill="#34d399">Enabled</tspan> | Frame Size: <tspan fill="#22d3ee">1522B</tspan> | TPID: <tspan fill="#38bdf8">0x8100</tspan></text>
+
+  <!-- Left Bottom: Hopping & DTP Simulators -->
+  <rect x="30" y="480" width="460" height="295" rx="10" fill="url(#cardGrad)" stroke="#152244" stroke-width="1.5" />
+  <text x="50" y="508" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="bold" font-size="14">VLAN Hopping &amp; DTP Exploit Simulators</text>
+
+  <rect x="50" y="525" width="420" height="65" rx="6" fill="rgba(16, 185, 129, 0.12)" stroke="#10b981" />
+  <text x="65" y="547" fill="#34d399" font-family="monospace" font-weight="bold" font-size="11">✓ PROTECTED: Dedicated Quarantine Native VLAN</text>
+  <text x="65" y="565" fill="#94a3b8" font-family="sans-serif" font-size="10">Trunk Native VLAN is set to 999. User ports isolated from trunk native domain.</text>
+  <text x="65" y="580" fill="#a7f3d0" font-family="sans-serif" font-size="9">Outer tag not stripped; CVE-2001-1413 double-tag hopping neutralized.</text>
+
+  <rect x="50" y="605" width="420" height="65" rx="6" fill="rgba(6, 182, 212, 0.12)" stroke="#06b6d4" />
+  <text x="65" y="627" fill="#22d3ee" font-family="monospace" font-weight="bold" font-size="11">✓ PROTECTED: DTP Disabled ("switchport nonegotiate")</text>
+  <text x="65" y="645" fill="#94a3b8" font-family="sans-serif" font-size="10">Port rejects all dynamic trunk negotiation attempts. Switch spoofing neutralized.</text>
+  <text x="65" y="660" fill="#bae6fd" font-family="sans-serif" font-size="9">Unauthorized laptops cannot form trunks to sniff multi-VLAN traffic.</text>
+
+  <rect x="50" y="685" width="420" height="75" rx="6" fill="#03060f" stroke="#152244" />
+  <text x="65" y="705" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="11">Layer 2 Frame Sizing Metrics:</text>
+  <text x="65" y="723" fill="#34d399" font-family="monospace" font-size="10">• Total Frame Size: 1522 Bytes (Baby Giant)</text>
+  <text x="65" y="740" fill="#cbd5e1" font-family="monospace" font-size="10">• Interface MTU: 9216 Bytes (Jumbo Headroom: +7694B)</text>
+
+  <!-- Right Column: Audit Scorecard & Hex Dissector -->
+  <rect x="510" y="160" width="660" height="230" rx="10" fill="url(#cardGrad)" stroke="#152244" stroke-width="1.5" />
+  <text x="530" y="190" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="bold" font-size="14">10-Point Zero-Trust Layer 2 Trunking Scorecard</text>
+
+  <rect x="530" y="210" width="620" height="60" rx="8" fill="rgba(16, 185, 129, 0.12)" stroke="#10b981" stroke-width="1" />
+  <circle cx="570" cy="240" r="22" fill="#03060f" stroke="#10b981" stroke-width="2" />
+  <text x="570" y="247" fill="#34d399" font-family="sans-serif" font-weight="900" font-size="18" text-anchor="middle">A+</text>
+  <text x="610" y="235" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="15">100 / 100 Points — Zero-Trust Hardened Trunking</text>
+  <text x="610" y="253" fill="#94a3b8" font-family="sans-serif" font-size="12">Quarantine Native VLAN 999, global native tagging, DTP disabled, explicit pruning.</text>
+
+  <!-- Findings snapshot -->
+  <rect x="530" y="285" width="300" height="40" rx="4" fill="#03060f" stroke="#152244" />
+  <text x="545" y="302" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="11">✓ Dedicated Native VLAN 999</text>
+  <text x="545" y="318" fill="#94a3b8" font-family="sans-serif" font-size="10">15/15 pts — VLAN 1 default eliminated</text>
+
+  <rect x="850" y="285" width="300" height="40" rx="4" fill="#03060f" stroke="#152244" />
+  <text x="865" y="302" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="11">✓ Global Native Tagging</text>
+  <text x="865" y="318" fill="#94a3b8" font-family="sans-serif" font-size="10">15/15 pts — Double-tagging neutralized</text>
+
+  <rect x="530" y="335" width="300" height="40" rx="4" fill="#03060f" stroke="#152244" />
+  <text x="545" y="352" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="11">✓ DTP Switch Spoofing Shield</text>
+  <text x="545" y="368" fill="#94a3b8" font-family="sans-serif" font-size="10">12/12 pts — "switchport nonegotiate"</text>
+
+  <rect x="850" y="335" width="300" height="40" rx="4" fill="#03060f" stroke="#152244" />
+  <text x="865" y="352" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="11">✓ Explicit Trunk Pruning</text>
+  <text x="865" y="368" fill="#94a3b8" font-family="sans-serif" font-size="10">10/10 pts — Inactive VLANs pruned</text>
+
+  <!-- Right Bottom: Hex Wireframe & Synthesizer -->
+  <rect x="510" y="405" width="660" height="370" rx="10" fill="url(#cardGrad)" stroke="#152244" stroke-width="1.5" />
+  <text x="530" y="430" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="bold" font-size="14">IEEE 802.1Q / 802.1ad Wireframe Dissector &amp; Multi-Platform Synthesizer</text>
+
+  <!-- Hex Dump Display -->
+  <rect x="530" y="445" width="620" height="115" rx="6" fill="#01040a" stroke="#152244" />
+  <text x="545" y="468" fill="#22d3ee" font-family="monospace" font-size="11">0000   00 50 56 a1 b2 c3 00 1a  2b 3c 4d 5e 81 00 00 64   |.PV.....+&lt;M^...d|</text>
+  <text x="545" y="488" fill="#cbd5e1" font-family="monospace" font-size="11">0010   08 00 45 00 00 1c 1a 2b  00 00 40 01 00 00 c0 a8   |..E....+..@.....|</text>
+  <text x="545" y="508" fill="#cbd5e1" font-family="monospace" font-size="11">0020   64 0a c0 a8 64 01 08 00  f7 fd 00 01 00 01 00 00   |d...d...........|</text>
+  <text x="545" y="535" fill="#38bdf8" font-family="monospace" font-size="10">[IEEE 802.1Q Tag: TPID 0x8100 | PCP: 0 (BE) | DEI: 0 | VLAN ID: 100 | EtherType: 0x0800 IPv4]</text>
+
+  <!-- Synthesizer Output -->
+  <rect x="530" y="575" width="620" height="185" rx="6" fill="#01040a" stroke="#152244" />
+  <text x="545" y="598" fill="#10b981" font-family="monospace" font-size="11">! Cisco Catalyst / IOS-XE Production Zero-Trust Trunk Hardening</text>
+  <text x="545" y="618" fill="#cbd5e1" font-family="monospace" font-size="11">vlan dot1q tag native &amp; vtp mode transparent</text>
+  <text x="545" y="638" fill="#22d3ee" font-family="monospace" font-size="11">vlan 999 &amp; name UNUSED_NATIVE_QUARANTINE_VLAN &amp; shutdown</text>
+  <text x="545" y="658" fill="#fbbf24" font-family="monospace" font-size="11">interface TenGigabitEthernet1/0/48 &amp; switchport mode trunk</text>
+  <text x="545" y="678" fill="#38bdf8" font-family="monospace" font-size="11"> switchport trunk native vlan 999 &amp; switchport nonegotiate</text>
+  <text x="545" y="698" fill="#34d399" font-family="monospace" font-size="11"> switchport trunk allowed vlan 10,20,100,200 &amp; mtu 9216</text>
+</svg>
